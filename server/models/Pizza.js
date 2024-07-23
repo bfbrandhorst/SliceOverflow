@@ -1,0 +1,1 @@
+// name, image, description(ingredients), price, size, allergens contained
