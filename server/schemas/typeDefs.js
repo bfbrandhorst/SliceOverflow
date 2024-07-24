@@ -5,6 +5,10 @@ const typeDefs = gql`
     _id: ID
     name: String!
   }
+  input CategoryInput {
+    _id: ID
+    name: String!
+  }
 
   type Pizza {
     _id: ID
@@ -14,12 +18,28 @@ const typeDefs = gql`
     price: Float!
     categories: [Category]
   }
+
+  input PizzaInput {
+    _id: ID
+    name: String!
+    description: String
+    image: String!
+    price: Float!
+    categories: [CategoryInput]
+  }
   
   type PizzaOrder {
     pizza: Pizza!
     quantity: Int!
     size: String!
   }
+  
+  input PizzaOrderInput {
+    pizza: PizzaInput!
+    quantity: Int!
+    size: String!
+  }
+
 
   type Order {
     _id: ID
@@ -49,14 +69,13 @@ const typeDefs = gql`
     categories: [Category]
     user: User
     order(_id: ID!): Order
-    checkout(pizzas: [PizzaOrder]!): Checkout
+    checkout(pizzas: [PizzaOrderInput]!): Checkout
   }
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(pizzas: [PizzaOrder]!): Order
+    addOrder(pizzas: [PizzaOrderInput]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updatePizzaOrder(_id: ID!, quantity: Int!, size: String!): PizzaOrder
     login(email: String!, password: String!): Auth
   }
 `;

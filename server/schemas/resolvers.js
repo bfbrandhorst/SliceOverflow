@@ -2,26 +2,37 @@ const { Tech, Matchup } = require('../models');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
+    categories: async () => {
+
     },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
+    user:async () => {
+
     },
+    order: async(parent,{_id}) =>{
+
+    },
+
+    checkout: async(parent,{pizzas}) =>{
+
+    }
+
+   
   },
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
+    addUser:async (parent,{firstName,lastName,email,password}) => {
+
     },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
+
+    addOrder:async (parent, {pizzas}) => {
+      
+    },
+
+    updateUser:async (parent,{firstName,lastName,email,password}) => {
+
+    },
+    
+    login:async(parent,{email,password}) => {
+
     },
   },
 };
