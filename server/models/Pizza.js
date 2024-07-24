@@ -1,5 +1,3 @@
-// name, image, description(ingredients), price, size, allergens contained
-
 const { Schema, model } = require('mongoose');
 
 const pizzaSchema = new Schema({
