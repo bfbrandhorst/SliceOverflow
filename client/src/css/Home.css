@@ -1,0 +1,57 @@
+.homeBanner{
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    width: 100%;
+    background-image: url('../assets/HomePic2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.Heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(207, 55, 55);
+}
+
+.Nav{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: flex-end;
+
+}
+
+.Nav li{
+    list-style: none;
+    color:white;
+    -webkit-text-stroke:black;
+    -webkit-text-stroke-width: 1px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.Nav li:hover{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.MockOrder{
+    display: flex;
+
+}
+
+.MockOrder>*{
+    flex: 1;
+}
+
+.location{
+    border: 3px rgb(207, 55, 55) solid;
+    background-color: rgba(255, 255, 255, 0.688);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
