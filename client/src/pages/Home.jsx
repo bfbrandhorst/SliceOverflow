@@ -5,19 +5,7 @@ import HomePic2 from '../assets/HomePic2.jpg'
 const Home =()=>{
     return (
         <>
-            <section className='homeBanner'>
-                <div className='Heading'>
-                <h1 >Slice Overflow</h1>
-                <ul className= 'Nav'>
-                    <li>Home</li>
-                    <li>Menu</li>
-                    <li>Login or Signup</li>
-                    <li>My Account</li>
-                    <li>Checkout</li>
-                </ul>
-                </div>
-                
-            </section>
+            
 
             <section className='MockOrder'>
                 <div className='location'>
