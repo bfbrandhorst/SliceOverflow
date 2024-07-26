@@ -1,0 +1,91 @@
+[
+    {
+      "_id": "user1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "hashedpassword123",
+      "orders": [
+        {
+          "_id": "order1",
+          "purchaseDate": "2024-07-01",
+          "pizzas": [
+            {
+              "pizza": {
+                "_id": "pizza1",
+                "name": "Margherita",
+                "description": "Classic pizza with tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.",
+                "image": "images/margherita.jpg",
+                "price": 9.99,
+                "categories": [
+                  { "_id": "cat1", "name": "Vegetarian" },
+                  { "_id": "cat5", "name": "Cheese Lovers" }
+                ]
+              },
+              "quantity": 2,
+              "size": "Large"
+            },
+            {
+              "pizza": {
+                "_id": "pizza3",
+                "name": "Veggie Supreme",
+                "description": "A delightful mix of bell peppers, onions, mushrooms, and black olives.",
+                "image": "images/veggie_supreme.jpg",
+                "price": 11.99,
+                "categories": [
+                  { "_id": "cat1", "name": "Vegetarian" },
+                  { "_id": "cat3", "name": "Vegan" }
+                ]
+              },
+              "quantity": 1,
+              "size": "Medium"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_id": "user2",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "hashedpassword456",
+      "orders": [
+        {
+          "_id": "order2",
+          "purchaseDate": "2024-07-02",
+          "pizzas": [
+            {
+              "pizza": {
+                "_id": "pizza2",
+                "name": "Pepperoni",
+                "description": "Pepperoni pizza with mozzarella cheese and a savory tomato sauce.",
+                "image": "images/pepperoni.jpg",
+                "price": 12.99,
+                "categories": [
+                  { "_id": "cat2", "name": "Meat Lovers" }
+                ]
+              },
+              "quantity": 3,
+              "size": "Large"
+            },
+            {
+              "pizza": {
+                "_id": "pizza4",
+                "name": "BBQ Chicken",
+                "description": "BBQ chicken with red onions, cilantro, and a smoky BBQ sauce.",
+                "image": "images/bbq_chicken.jpg",
+                "price": 13.99,
+                "categories": [
+                  { "_id": "cat2", "name": "Meat Lovers" }
+                ]
+              },
+              "quantity": 1,
+              "size": "Medium"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  
