@@ -8,7 +8,6 @@ import LoginSignup from './pages/LoginSignup.jsx'
 import CartCheckout from './pages/CartCheckout.jsx'
 
 
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -17,16 +16,17 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home/>
-      }, {
-        path: '/Menu',
-        element: 'Menu'
-      }, {
-        path: '/LoginSignup',
-        element: 'Login or Signup'
-      }, {
-        path: '/CartCheckout',
-        element: 'Checkout'
+        element: <Home/>},
+      {
+        path: 'menu',
+        element: <Menu />
+      },
+      {  path: 'loginSignup',
+        element: <LoginSignup />
+      }, 
+      {
+        path: 'cartCheckout',
+        element: <CartCheckout />
       }
     ]
   }
