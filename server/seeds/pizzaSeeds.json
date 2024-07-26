@@ -1,0 +1,44 @@
+[
+{
+    "_id": "1",
+    "name": "this.pizza",
+    "description": "Anchovy",
+    "image": "",
+    "price": "$9.99"
+},
+{
+    "_id": "2",
+    "name": "CRUD",
+    "description": "Meat Lovers",
+    "image": "",
+    "price": "$9.99"
+},
+{
+    "_id": "3",
+    "name": "C++",
+    "description": "Cheese Lovers",
+    "image": "",
+    "price": "$9.99"
+},
+{
+    "_id": "4",
+    "name": "Github Garden",
+    "description": "Veggie Lovers",
+    "image": "",
+    "price": "$9.99"
+},
+{
+    "_id": "5",
+    "name": "Boolean Byte",
+    "description": "1/2 Pepperoni, 1/2 Cheese",
+    "image": "",
+    "price": "$9.99"
+},
+{
+    "_id": "6",
+    "name": "Hacker's Paradise",
+    "description": "Hawaiian",
+    "image": "",
+    "price": "$9.99"
+}
+]

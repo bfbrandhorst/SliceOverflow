@@ -1,13 +1,8 @@
 const { Schema, model } = require('mongoose');
+const pizzaOrderSchema = require('./PizzaOrder')
 
 const orderSchema = new Schema({
-    pizzas:[
-        {
-            type:Schema.Types.ObjectId,
-            ref:'PizzaOrder',
-            required:true
-        }
-    ]
+    pizzas:[pizzaOrderSchema]
 })
 
 const Order = model('Order',orderSchema);
