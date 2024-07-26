@@ -1,22 +1,12 @@
 
 
 const typeDefs = `
-  type Category {
-    _id: ID
-    name: String!
-  }
-  input CategoryInput {
-    _id: ID
-    name: String!
-  }
-
   type Pizza {
     _id: ID
     name: String!
     description: String
     image: String!
     price: Float!
-    categories: [Category]
   }
 
   input PizzaInput {
@@ -25,7 +15,6 @@ const typeDefs = `
     description: String
     image: String!
     price: Float!
-    categories: [CategoryInput]
   }
   
   type PizzaOrder {
@@ -66,7 +55,6 @@ const typeDefs = `
   }
 
   type Query {
-    categories: [Category]
     user: User
     order(_id: ID!): Order
     checkout(pizzas: [PizzaOrderInput]!): Checkout

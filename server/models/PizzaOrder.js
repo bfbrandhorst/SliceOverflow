@@ -16,6 +16,4 @@ const pizzaOrderSchema = new Schema({
         }
 });
 
-const PizzaOrder = model('PizzaOrder', pizzaOrderSchema)
-
-module.exports = PizzaOrder;
+module.exports =  pizzaOrderSchema;

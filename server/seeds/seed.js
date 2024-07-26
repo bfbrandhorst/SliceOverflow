@@ -36,3 +36,4 @@ db.once('open', async () => {
   console.log('All done!');
   process.exit(0);
 });
+

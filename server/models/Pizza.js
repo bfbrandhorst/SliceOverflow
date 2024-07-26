@@ -16,12 +16,6 @@ const pizzaSchema = new Schema({
         type: Number,
         required: true
     },
-    categories: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Category',
-        }
-    ]
 });
 
 const Pizza = model('Pizza', pizzaSchema)
