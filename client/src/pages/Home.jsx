@@ -5,7 +5,6 @@ import HomePic2 from '../assets/HomePic2.jpg'
 const Home =()=>{
     return (
         <>
-            
 
             <section className='MockOrder'>
                 <div className='location'>
