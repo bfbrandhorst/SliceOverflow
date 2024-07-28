@@ -28,13 +28,15 @@ export const QUERY_USER = gql `
 `
 
 export const QUERY_PIZZAS = gql`
-    query pizza {
-        _id
-        name
-        description
-        image
-        price
+   query Pizzas {
+  pizzas {
+    _id
+    description
+    image
+    name
+    price
   }
+}
 `
 
 export const QUERY_SINGLE_PIZZA = gql`

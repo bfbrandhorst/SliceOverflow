@@ -1,101 +1,38 @@
 [
-<<<<<<< HEAD
-    {
-      "_id": "pizza1",
-      "name": "Margherita",
-      "description": "Classic pizza with tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.",
-      "image": "images/margherita.jpg",
-      "price": 9.99,
-      "categories": [
-        { "_id": "cat1", "name": "Vegetarian" },
-        { "_id": "cat5", "name": "Cheese Lovers" }
-      ]
-    },
-    {
-      "_id": "pizza2",
-      "name": "Pepperoni",
-      "description": "Pepperoni pizza with mozzarella cheese and a savory tomato sauce.",
-      "image": "images/pepperoni.jpg",
-      "price": 12.99,
-      "categories": [
-        { "_id": "cat2", "name": "Meat Lovers" }
-      ]
-    },
-    {
-      "_id": "pizza3",
-      "name": "Veggie Supreme",
-      "description": "A delightful mix of bell peppers, onions, mushrooms, and black olives.",
-      "image": "images/veggie_supreme.jpg",
-      "price": 11.99,
-      "categories": [
-        { "_id": "cat1", "name": "Vegetarian" },
-        { "_id": "cat3", "name": "Vegan" }
-      ]
-    },
-    {
-      "_id": "pizza4",
-      "name": "BBQ Chicken",
-      "description": "BBQ chicken with red onions, cilantro, and a smoky BBQ sauce.",
-      "image": "images/bbq_chicken.jpg",
-      "price": 13.99,
-      "categories": [
-        { "_id": "cat2", "name": "Meat Lovers" }
-      ]
-    },
-    {
-      "_id": "pizza5",
-      "name": "Seafood Delight",
-      "description": "Shrimp, scallops, and calamari with a garlic and herb sauce.",
-      "image": "images/seafood_delight.jpg",
-      "price": 14.99,
-      "categories": [
-        { "_id": "cat4", "name": "Seafood" }
-      ]
-    }
-  ]
-  
-=======
 {
-    "_id": "1",
     "name": "this.pizza",
     "description": "Anchovy",
-    "image": "",
-    "price": "$9.99"
+    "image": "test",
+    "price": 9.99
 },
 {
-    "_id": "2",
     "name": "CRUD",
     "description": "Meat Lovers",
-    "image": "",
-    "price": "$9.99"
+    "image": "test",
+    "price": 9.99
 },
 {
-    "_id": "3",
     "name": "C++",
     "description": "Cheese Lovers",
-    "image": "",
-    "price": "$9.99"
+    "image": "test",
+    "price": 9.99
 },
 {
-    "_id": "4",
     "name": "Github Garden",
     "description": "Veggie Lovers",
-    "image": "",
-    "price": "$9.99"
+    "image": "test",
+    "price": 9.99
 },
 {
-    "_id": "5",
     "name": "Boolean Byte",
     "description": "1/2 Pepperoni, 1/2 Cheese",
-    "image": "",
-    "price": "$9.99"
+    "image": "test",
+    "price": 9.99
 },
 {
-    "_id": "6",
     "name": "Hacker's Paradise",
     "description": "Hawaiian",
-    "image": "",
-    "price": "$9.99"
+    "image": "test",
+    "price": 9.99
 }
 ]
->>>>>>> 78e4ad1229d2662adf1c1bb9bf68d5f15e42638a

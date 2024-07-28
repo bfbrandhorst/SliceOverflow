@@ -5,9 +5,6 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    category: async () => {
-      return await Category.find({});
-    },
     user: async (parent, args, context) => {
       console.log("Context data: ", context.user)
       if (context.user) {
@@ -15,13 +12,13 @@ const resolvers = {
           path: 'orders.pizzas.pizza',
           model: 'Pizza'
         });
-        return await User.findById(context.user._id) .populate({
-          path: 'orders.pizzas.pizza',
-          model: 'Pizza'
-        }); 
       }
       throw new AuthenticationError('Not logged in');
     },
+    pizzas: async () => {
+      return await Pizza.find()
+    },
+
     order: async (parent, { _id }, context) => {
       if (context.user) {
         return await Order.findById(_id).populate({
