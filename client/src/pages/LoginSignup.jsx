@@ -5,9 +5,9 @@ import SignupForm from "../Component/SignUpForm";
 const LoginSignup = () => {
   return (
     <div>
-      <h1>Login</h1>
+      <br></br>
       <LoginForm />
-      <h1>Signup</h1>
+      <br></br>
       <SignupForm />
     </div>
   );
