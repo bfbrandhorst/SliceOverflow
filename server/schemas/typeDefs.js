@@ -1,6 +1,4 @@
-
-
-const typeDefs = `
+ const typeDefs = `
   type Pizza {
     _id: ID
     name: String!
