@@ -18,14 +18,14 @@ const router = createBrowserRouter([
         index: true,
         element: <Home/>},
       {
-        path: 'menu',
+        path: '/menu',
         element: <Menu />
       },
-      {  path: 'loginSignup',
+      {  path: '/loginSignup',
         element: <LoginSignup />
       }, 
       {
-        path: 'cartCheckout',
+        path: '/cartCheckout',
         element: <CartCheckout />
       }
     ]

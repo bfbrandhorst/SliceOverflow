@@ -1,4 +1,5 @@
 import '../css/Home.css'
+import {Link} from 'react-router-dom'
 
 const NavBar = ()=> {
     return (
@@ -6,13 +7,14 @@ const NavBar = ()=> {
                 <div className='Heading'>
                 <h1 >Slice Overflow</h1>
                 <ul className= 'Nav'>
-                    <li>Home</li>
-                    <li>Menu</li>
-                    <li>Login or Signup</li>
-                    <li>Checkout</li>
+                    <li><Link to='/' className='Link'>Home</Link></li>
+                    <li><Link to='/menu' className='Link'>Menu</Link></li>
+                    <li><Link to='/loginSignup' className='Link'>Login or Signup</Link></li>
+                    <li><Link to='/cartCheckout' className='Link'>Checkout</Link></li>
                 </ul>
-                </div>
                 
+                </div>
+            
             </section>
     )
 }
