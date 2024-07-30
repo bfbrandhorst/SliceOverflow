@@ -22,7 +22,7 @@
   }
   
   input PizzaOrderInput {
-    pizza: PizzaInput!
+    pizza: ID!
     quantity: Int!
     size: String!
   }

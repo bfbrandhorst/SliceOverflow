@@ -1,16 +1,16 @@
-const jwt = require('jsonwebtoken');
-require('dotenv').config();
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 const secret = process.env.REACT_APP_ENCRYPT_SECRET;
-const expiration = '2h';
+console.log("JWT Secret:", secret); // Add this line to check the secret
+const expiration = "2h";
 
 module.exports = {
   authMiddleware: function ({ req }) {
-    
     let token = req.body.token || req.query.token || req.headers.authorization;
 
     // Bearer JWTinfo ["Bearer", "token_data"]
     if (req.headers.authorization) {
-      token = token.split(' ').pop().trim();
+      token = token.split(" ").pop().trim();
     }
 
     if (!token) {
@@ -22,7 +22,7 @@ module.exports = {
       //console.log("Data: ", data);
       req.user = data;
     } catch {
-      console.log('Invalid token');
+      console.log("Invalid token");
     }
 
     return req;

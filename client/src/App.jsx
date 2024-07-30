@@ -1,24 +1,20 @@
-
-import { Outlet } from 'react-router-dom'
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
-import NavBar from './Component/NavBar'
-
+import { Outlet } from "react-router-dom";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import NavBar from "./Component/NavBar";
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
 function App() {
-  
-
   return (
     // This is what allows us to use apollo hooks
-    <ApolloProvider client={client}> 
-    <NavBar/>
-     <Outlet/>
+    <ApolloProvider client={client}>
+      <NavBar />
+      <Outlet />
     </ApolloProvider>
-  )
+  );
 }
 
-export default App
+export default App;
