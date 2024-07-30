@@ -4,7 +4,6 @@ import CartCheckoutForm from "../Component/CartCheckoutForm";
 const CartCheckout = () => {
   return (
     <div>
-      <h1>Cart Checkout</h1>
       <CartCheckoutForm />
     </div>
   );

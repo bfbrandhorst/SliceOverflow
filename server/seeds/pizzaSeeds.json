@@ -1,38 +1,38 @@
 [
-{
+{   
     "name": "this.pizza",
     "description": "Anchovy",
-    "image": "test",
+    "image": "../assets/This.jpg",
     "price": 9.99
 },
 {
     "name": "CRUD",
     "description": "Meat Lovers",
-    "image": "test",
+    "image": "../assets/CRUD.jpg",
     "price": 9.99
 },
 {
     "name": "C++",
     "description": "Cheese Lovers",
-    "image": "test",
+    "image": "../assets/Cheese.jpg",
     "price": 9.99
 },
 {
     "name": "Github Garden",
     "description": "Veggie Lovers",
-    "image": "test",
+    "image": "../assets/GithubGarden.jpg",
     "price": 9.99
 },
 {
     "name": "Boolean Byte",
     "description": "1/2 Salami, 1/2 Veggie",
-    "image": "test",
+    "image": "../assets/BooleanByte.jpg",
     "price": 9.99
 },
 {
     "name": "Hacker's Paradise",
     "description": "Hawaiian",
-    "image": "test",
+    "image": "../assets/HackersParadise.jpg",
     "price": 9.99
 }
 ]
