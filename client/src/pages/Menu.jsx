@@ -9,7 +9,7 @@ import Cheese from '../assets/Cheese.jpg'
 import GithubGarden from '../assets/GithubGarden.jpg'
 import BooleanByte from '../assets/BooleanByte.jpg'
 import HackersParadise from '../assets/HackersParadise.jpg'
-import { ADD_ORDER } from '../utils/queries';
+import { ADD_TO_CART } from '../utils/reducers';
 
 const pizzaArray = [
   {
@@ -99,7 +99,7 @@ const Menu = () => {
                   <button onClick={() => handleIncrease(index)}>⬆</button>
                 </div>
                 <br />
-                <button onClick = { () => ADD_ORDER(pizzaOrder) } >Add to Cart</button>
+                <button onClick = { () => ADD_TO_CART(pizzaOrder) } >Add to Cart</button>
              </div>
           </div>
             

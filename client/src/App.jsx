@@ -1,7 +1,3 @@
-import { Outlet } from "react-router-dom";
-import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
-import NavBar from "./Component/NavBar";
-
 import { Outlet } from 'react-router-dom'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import NavBar from './Component/NavBar'

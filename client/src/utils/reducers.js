@@ -7,7 +7,7 @@ import {
   //ADD_MULTIPLE_TO_CART,
   
   CLEAR_CART,
-  //TOGGLE_CART,
+  TOGGLE_CART,
 
 } from "./actions";
 
@@ -62,11 +62,11 @@ export const reducer = (state, action) => {
         cart: []
       };
 
-    // case TOGGLE_CART:
-    //   return {
-    //     ...state,
-    //     cartOpen: !state.cartOpen
-    //   };
+    case TOGGLE_CART:
+      return {
+        ...state,
+        cartOpen: !state.cartOpen
+      };
 
     default:
       return state;
