@@ -1,10 +1,14 @@
-import React from 'react';
+import React from "react";
+import LoginForm from "../Component/LoginForm";
+import SignupForm from "../Component/SignUpForm";
 
 const LoginSignup = () => {
   return (
     <div>
-      <h1>Login Signup</h1>
-      <p>This is the login page.</p>
+      <br></br>
+      <LoginForm />
+      <br></br>
+      <SignupForm />
     </div>
   );
 };

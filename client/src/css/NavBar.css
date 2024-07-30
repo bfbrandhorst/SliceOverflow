@@ -1,0 +1,21 @@
+.Nav{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: flex-end;
+
+}
+
+.Nav li{
+    list-style: none;
+    color:black;
+    -webkit-text-stroke:black;
+    -webkit-text-stroke-width: 1px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.Nav li:hover{
+    font-size: 30px;
+    cursor: pointer;
+}

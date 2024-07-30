@@ -1,6 +1,4 @@
-
-
-const typeDefs = `
+ const typeDefs = `
   type Pizza {
     _id: ID
     name: String!
@@ -24,7 +22,7 @@ const typeDefs = `
   }
   
   input PizzaOrderInput {
-    pizza: PizzaInput!
+    pizza: ID!
     quantity: Int!
     size: String!
   }
