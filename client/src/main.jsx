@@ -5,7 +5,7 @@ import App from './App.jsx'
 import Home from './pages/Home.jsx'
 import Menu from './pages/Menu.jsx'
 import LoginSignup from './pages/LoginSignup.jsx' 
-import CartCheckout from './pages/CartCheckout.jsx'
+//import CartCheckout from './pages/CartCheckout.jsx'
 
 
 const router = createBrowserRouter([
@@ -24,10 +24,10 @@ const router = createBrowserRouter([
       {  path: 'loginSignup',
         element: <LoginSignup />
       }, 
-      {
-        path: 'cartCheckout',
-        element: <CartCheckout />
-      }
+      // {
+      //   path: 'cartCheckout',
+      //   element: <CartCheckout />
+      // }
     ]
   }
 ])

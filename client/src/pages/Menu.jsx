@@ -1,8 +1,9 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { useEffect } from 'react';
-import { useState } from 'react';
+//import { useState } from 'react';
 import { QUERY_PIZZAS } from '../utils/queries';
+//import { addToCart } from '../utils/localStorage';
 
 const Menu = () => {
 
@@ -23,9 +24,14 @@ const Menu = () => {
 
       {pizzas.map((pizza, index) => {
         return (
-          <div key={index}>{pizza.image}</div>
+          <div key={index}>{pizza.image}
+
+          {/* <button onClick = { () => addToCart(pizzaOrder) } >Add To Order</button> */}
+
+          </div>
         )
       })}
+
     </div>
   );
 };
