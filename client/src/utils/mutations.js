@@ -29,11 +29,15 @@ export const ADD_ORDER = gql`
     addOrder(pizzas: $pizzas) {
       _id
       pizzas {
-        _id
-        name
-        description
-        image
-        price
+        quantity
+        }
+        pizza {
+          _id
+          description
+          image
+          name
+          price
+        }
       }
     }
   }
