@@ -1,4 +1,4 @@
-const { User, Order, Pizza, Category } = require('../models');
+const { User, Order, Pizza, Category, PizzaOrder } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
@@ -6,7 +6,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     user: async (parent, args, context) => {
-      console.log("Context data: ", context.user)
+      
       if (context.user) {
         return await User.findById(context.user._id).populate({
           path: 'orders.pizzas.pizza',
@@ -72,9 +72,18 @@ const resolvers = {
       return { token, user };
     },
     addOrder: async (parent, { pizzas }, context) => {
-      console.log("Context: ", context);
+      
       if (context.user) {
-        const order = new Order({ pizzas });
+        const OrderInput = []
+        for ( const PizzaOrder of pizzas 
+        ){ 
+          const pizza = await Pizza.findById(PizzaOrder.pizza)
+           const PizzaOrderInput = {size:PizzaOrder.size,quantity:PizzaOrder.quantity,pizza}
+           OrderInput.push (PizzaOrderInput)
+        }
+        console.log(OrderInput)
+        const order = new Order({ pizzas:OrderInput });
+        console.log(order)
         await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
         return order;
       }
