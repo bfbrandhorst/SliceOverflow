@@ -1,15 +1,10 @@
-// import { getCart } from "../../utils/localStorage"
+import { getCart } from "../../utils/localStorage"
 
-// const cart = getCart()
-
-// export const orderSubtotal = (price, quantity) => {
-//     for (i = 0; i < cart.length(); i++){
-//         orderSubtotal = pizzaOrder.price * pizzaOrder.quantity
-//     }
-// }
-
-// export const orderTotal = (orderSubtotal) => {
-//     orderTotal = Math.ceiling(orderSubtotal + (orderSubtotal *.0825))
-// }
-// console.log(orderSubtotal)
-// console.log(orderTotal)
+export const orderTotal = () => {
+    const cart = getCart()
+    let total = 0
+    for (i = 0; i < cart.length(); i++){
+        total = cart[i].price * cart[i].quantity
+    }
+    return Math.ceiling(total + (total *.0825))
+}

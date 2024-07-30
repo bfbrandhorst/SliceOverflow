@@ -1,25 +1,12 @@
-export const createPizzaOrder = (pizzaOrderArray, quantity) => {
-    const order = {
-        name: pizzaOrderArray.name,
-        price: pizzaOrderArray.price,
-        quantity: quantity
-    }
-
-    console.log(order)
-}
-
-export const addToCart = (pizzaOrderArray) => {
-    // console.log(pizzaId)
-    // const pizzaToSave = pizzaArray.find((pizza) => pizza.pizzaId == pizzaId)
-
+export const setCart = (pizzaOrderArray) => {
     console.log(pizzaOrderArray)
   
-    const cart = localStorage.getItem('cart')
-    ? JSON.parse(localStorage.getItem('cart'))
-    : [];
+    // const cart = localStorage.getItem('cart')
+    // ? JSON.parse(localStorage.getItem('cart'))
+    // : [];
 
-    cart.push(pizzaOrderArray)
+    //cart.push(pizzas
 
-    localStorage.setItem('cart', JSON.stringify(cart))
+    localStorage.setItem('cart', JSON.stringify(pizzaOrderArray))
 }
   
