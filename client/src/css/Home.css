@@ -1,15 +1,4 @@
 
-.homeBanner{
-    margin: 0;
-    padding: 0;
-    height: 80vh;
-    width: 100%;
-    background-image: url('../assets/HomePic2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
 .Heading{
     display: flex;
     align-items: center;
@@ -17,7 +6,7 @@
     color: rgb(207, 55, 55);
 }
 
-.Nav{
+/* .Nav{
     display: flex;
     padding: 1rem;
     gap: 1rem;
@@ -37,7 +26,7 @@
 .Nav li:hover{
     font-size: 30px;
     cursor: pointer;
-}
+} */
 
 .MockOrder{
     display: flex;
