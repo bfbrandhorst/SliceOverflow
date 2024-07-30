@@ -20,17 +20,20 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "menu",
-        element: <Menu />,
+        path: '/menu',
+        element: <Menu />
       },
-      { path: "loginSignup", element: <LoginSignup /> },
+      {  path: '/loginSignup',
+        element: <LoginSignup />
+      }, 
       {
-        path: "cartCheckout",
-        element: <CartCheckout />,
-      },
-    ],
-  },
-]);
+        path: '/cartCheckout',
+        element: <CartCheckout />
+      }
+    ]
+  }
+])
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ApolloProvider client={client}>

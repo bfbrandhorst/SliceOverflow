@@ -1,0 +1,40 @@
+.pizzaContainer{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.pizzaContainer>*{
+    flex: 1;
+}
+
+.pizzaCard{
+    border: 3px rgb(207, 55, 55) solid;
+    border-radius: 16px;
+    background-color: rgb(75, 73, 73);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 1rem;
+    max-width: 45rem;
+    min-width: 35rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.imageContainer{
+    max-width: 20rem;
+    min-width: 10rem;
+}
+
+img{
+    width: 100%;
+}
+
+.pizzaInfo{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
