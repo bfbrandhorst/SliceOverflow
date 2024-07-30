@@ -1,46 +1,46 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
-export const QUERY_USER = gql `
-    query user {
+export const QUERY_USER = gql`
+  query user {
     user {
       _id
       firstName
       lastName
       email
       password
-      order{
+      order {
         _id
         pizzas {
-            pizza {
-                _id
-                name
-                description
-                image
-                price
-                category
-            }
-            quantity
-            size
+          pizza {
+            _id
+            name
+            description
+            image
+            price
+            category
+          }
+          quantity
+          size
         }
       }
     }
   }
-`
+`;
 
 export const QUERY_PIZZAS = gql`
-   query Pizzas {
-  pizzas {
-    _id
-    description
-    image
-    name
-    price
+  query Pizzas {
+    pizzas {
+      _id
+      description
+      image
+      name
+      price
+    }
   }
-}
-`
+`;
 
 export const QUERY_SINGLE_PIZZA = gql`
-    query getPizzas($pizza_id: ID) {
+  query getPizzas($pizza_id: ID) {
     pizza(pizza_id: $pizza_id) {
       _id
       name
@@ -50,4 +50,26 @@ export const QUERY_SINGLE_PIZZA = gql`
       image
     }
   }
-`
+`;
+
+export const GET_CART_ITEMS = gql`
+  query getCartItems {
+    cartItems {
+      pizza {
+        _id
+        name
+        price
+      }
+      quantity
+      size
+    }
+  }
+`;
+
+export const CHECKOUT = gql`
+  mutation checkout($pizzas: [PizzaOrderInput]!) {
+    checkout(pizzas: $pizzas) {
+      session
+    }
+  }
+`;
