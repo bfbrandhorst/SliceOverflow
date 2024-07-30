@@ -13,46 +13,46 @@ import { addToCart, createPizzaOrder } from './Cart/CartItem';
 
 const pizzaArray = [
   {
-      id: 1,
-      name: "this.pizza",
-      description: "Anchovy",
-      image: This,
-      price: 9.99
+      "id": 1,
+      "name": "this.pizza",
+      "description": "Anchovy",
+      "image": This,
+      "price": 9.99
   },
   {
       "id": 2,
       "name": "CRUD",
       "description": "Meat Lovers",
       "image": CRUD,
-      "price": 9.99
+      "price": 12.99
   },
   {
       "id": 3,
       "name": "C++",
       "description": "Cheese Lovers",
       "image": Cheese,
-      "price": 9.99
+      "price": 12.99
   },
   {
       "id": 4,
       "name": "Github Garden",
       "description": "Veggie Lovers",
       "image": GithubGarden,
-      "price": 9.99
+      "price": 12.99
   },
   {
       "id": 5,
       "name": "Boolean Byte",
       "description": "1/2 Salami, 1/2 Veggie",
       "image": BooleanByte,
-      "price": 9.99
+      "price": 10.99
   },
   {
       "id": 6,
       "name": "Hacker's Paradise",
       "description": "Hawaiian",
       "image": HackersParadise,
-      "price": 9.99
+      "price": 10.99
   }
   ]
 

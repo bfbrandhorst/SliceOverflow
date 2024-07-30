@@ -1,11 +1,10 @@
-
-
 export const createPizzaOrder = (pizzaOrderArray, quantity) => {
     const order = {
         name: pizzaOrderArray.name,
+        price: pizzaOrderArray.price,
         quantity: quantity
     }
-    
+
     console.log(order)
 }
 
@@ -24,8 +23,3 @@ export const addToCart = (pizzaOrderArray) => {
     localStorage.setItem('cart', JSON.stringify(cart))
 }
   
-//   useEffect(()=> {
-//     console.log(pizzaArray)
-//   },
-//   [pizzaArray]
-// )
