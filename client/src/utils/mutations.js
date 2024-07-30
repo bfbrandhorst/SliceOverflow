@@ -40,7 +40,7 @@ export const ADD_ORDER = gql`
         }
       }
     }
-  }
+
 `;
 
 export const UPDATE_USER = gql`

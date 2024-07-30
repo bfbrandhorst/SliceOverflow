@@ -9,40 +9,46 @@ import Cheese from '../assets/Cheese.jpg'
 import GithubGarden from '../assets/GithubGarden.jpg'
 import BooleanByte from '../assets/BooleanByte.jpg'
 import HackersParadise from '../assets/HackersParadise.jpg'
-import { ADD_TO_CART } from '../utils/reducers';
+import { addToCart, createPizzaOrder } from './Cart/CartItem';
 
 const pizzaArray = [
   {
-      "name": "this.pizza",
-      "description": "Anchovy",
-      "image": This,
-      "price": 9.99
+      id: 1,
+      name: "this.pizza",
+      description: "Anchovy",
+      image: This,
+      price: 9.99
   },
   {
+      "id": 2,
       "name": "CRUD",
       "description": "Meat Lovers",
       "image": CRUD,
       "price": 9.99
   },
   {
+      "id": 3,
       "name": "C++",
       "description": "Cheese Lovers",
       "image": Cheese,
       "price": 9.99
   },
   {
+      "id": 4,
       "name": "Github Garden",
       "description": "Veggie Lovers",
       "image": GithubGarden,
       "price": 9.99
   },
   {
+      "id": 5,
       "name": "Boolean Byte",
       "description": "1/2 Salami, 1/2 Veggie",
       "image": BooleanByte,
       "price": 9.99
   },
   {
+      "id": 6,
       "name": "Hacker's Paradise",
       "description": "Hawaiian",
       "image": HackersParadise,
@@ -52,7 +58,7 @@ const pizzaArray = [
 
 const Menu = () => {
 
-  const [quantities, setQuantities] = useState(pizzaArray.map(() => 1));
+  const [quantities, setQuantities] = useState(pizzaArray.map(() => 0));
 
   const handleIncrease = (index) => {
     const newQuantities = [...quantities];
@@ -67,19 +73,15 @@ const Menu = () => {
     }
     setQuantities(newQuantities);
   };
-  
+
   useEffect(()=> {
     console.log(pizzaArray)
   },
   [pizzaArray]
 )
 
-
-
   return (
     <div>
-      <h1>Menu</h1>
-      <p>This is the menu page.</p>
 
       <section className='pizzaContainer'>
       {pizzaArray.map((pizza, index) =>  (
@@ -99,7 +101,7 @@ const Menu = () => {
                   <button onClick={() => handleIncrease(index)}>⬆</button>
                 </div>
                 <br />
-                <button onClick = { () => ADD_TO_CART(pizzaOrder) } >Add to Cart</button>
+                <button onClick = { () => createPizzaOrder({...pizza}, quantities) } >Add to Cart</button>
              </div>
           </div>
             

@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import NavBar from './Component/NavBar'
-import { StoreProvider } from './utils/context'
 
 import { useState } from 'react'
 
@@ -17,10 +16,8 @@ function App() {
   return (
     // This is what allows us to use apollo hooks
     <ApolloProvider client={client}> 
-    < StoreProvider >
       <NavBar/>
       <Outlet/>
-    </StoreProvider>
     </ApolloProvider>
   );
 }
