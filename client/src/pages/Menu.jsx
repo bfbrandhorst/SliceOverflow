@@ -9,7 +9,8 @@ import Cheese from '../assets/Cheese.jpg'
 import GithubGarden from '../assets/GithubGarden.jpg'
 import BooleanByte from '../assets/BooleanByte.jpg'
 import HackersParadise from '../assets/HackersParadise.jpg'
-//import { QUERY_PIZZAS } from '../utils/queries';
+import { ADD_ORDER } from '../utils/queries';
+
 const pizzaArray = [
   {
       "name": "this.pizza",
@@ -51,8 +52,21 @@ const pizzaArray = [
 
 const Menu = () => {
 
- // const {loading, data} = useQuery(QUERY_PIZZAS) //
- // const pizzas = data?.pizzas || []
+  const [quantities, setQuantities] = useState(pizzaArray.map(() => 1));
+
+  const handleIncrease = (index) => {
+    const newQuantities = [...quantities];
+    newQuantities[index] += 1;
+    setQuantities(newQuantities);
+  };
+
+  const handleDecrease = (index) => {
+    const newQuantities = [...quantities];
+    if (newQuantities[index] > 1) {
+      newQuantities[index] -= 1;
+    }
+    setQuantities(newQuantities);
+  };
   
   useEffect(()=> {
     console.log(pizzaArray)
@@ -60,29 +74,37 @@ const Menu = () => {
   [pizzaArray]
 )
 
+
+
   return (
     <div>
       <h1>Menu</h1>
       <p>This is the menu page.</p>
 
       <section className='pizzaContainer'>
-      {pizzaArray.map((pizza, index) => {
-        return (
+      {pizzaArray.map((pizza, index) =>  (
          
           <div className='pizzaCard' key={index}>
              
              <div className='imageContainer'>
-               <img src={pizza.image}/>
+               <img src={pizza.image} alt={pizza.name}/>
              </div>
              <div className='pizzaInfo'>
              <p>{pizza.price}</p>
              <h3>{pizza.name}</h3>
              <p>{pizza.description}</p>
+                <div>Quantity:
+                  <button onClick={() => handleDecrease(index)}>⬇</button>
+                  <span>{quantities[index]}</span>
+                  <button onClick={() => handleIncrease(index)}>⬆</button>
+                </div>
+                <br />
+                <button onClick = { () => ADD_ORDER(pizzaOrder) } >Add to Cart</button>
              </div>
-            </div>
+          </div>
             
         )
-      })}
+      )}
       </section>
     </div>
   );
