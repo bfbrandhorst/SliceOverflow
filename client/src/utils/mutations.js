@@ -40,7 +40,6 @@ export const ADD_ORDER = gql`
         }
       }
     }
-  }
 `;
 
 export const UPDATE_USER = gql`
@@ -73,7 +72,7 @@ export const LOGIN_USER = gql`
       token
       user {
         _id
-        username
+        email
       }
     }
   }
