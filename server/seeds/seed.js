@@ -9,7 +9,7 @@ db.once('open', async () => {
   try {
     
     // await cleanDB('Category', 'categories');
-    // await cleanDB('Pizza', 'pizzas');
+    await cleanDB('Pizza', 'pizzas');
     // await cleanDB('User', 'users');
     // await cleanDB('Order', 'orders');
 
