@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Home.css'
-import HomePic2 from '../assets/HomePic2.jpg'
+import HomePic2 from '../../public/assets/HomePic2.jpg'
 import {HeroBanner} from '../Component/HeroBanner'
 
 const Home =()=>{
