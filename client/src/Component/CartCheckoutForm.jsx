@@ -23,17 +23,21 @@ const CartCheckoutForm = () => {
 
   const handleCheckout = async () => {
     try {
-      const { data } = await checkout({
-        variables: {
-          pizzas: cart.map((item) => ({
-            pizza: item.pizza._id,
-            quantity: item.quantity,
-            price: item.price,
-          })),
-        },
-      });
+      <Box>
+        <h1>Hello</h1>
+      </Box>
+
+      // const { data } = await checkout({
+      //   variables: {
+      //     pizzas: cart.map((item) => ({
+      //       pizza: item.pizza._id,
+      //       quantity: item.quantity,
+      //       price: item.price,
+      //     })),
+      //   },
+      //});
       // Handle successful checkout (e.g., redirect to a success page)
-      console.log(data.checkout.session);
+      //console.log(data.checkout.session);
     } catch (err) {
       console.error(err);
       setErrorMessage(
