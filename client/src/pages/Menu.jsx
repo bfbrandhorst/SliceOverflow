@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import '../css/Menu.css'
+import { setCart } from './Cart/CartItem';
 
 import { QUERY_PIZZAS } from '../utils/queries';
 
