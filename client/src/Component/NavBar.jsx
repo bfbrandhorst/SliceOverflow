@@ -1,4 +1,4 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Button, Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Link } from 'react-router-dom'
 import Auth from "../utils/auth"
 const navigation = [
@@ -32,7 +32,7 @@ export default function Example() {
               <div className="flex space-x-4">
               <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/">Home</Link>
               <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/menu">Menu</Link>
-              {Auth.loggedIn() ? <button onClick={Auth.logout} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Logout</button>:<Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/loginSignup">Login or Signup</Link>}
+              {Auth.loggedIn() ? <Button onClick={Auth.logout} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Logout</Button>: <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/loginSignup">Login or Signup</Link>}
               
               <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/cartCheckout">Checkout</Link>
               </div>
