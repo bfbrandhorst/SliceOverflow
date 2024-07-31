@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   Container,
   Typography,
@@ -16,17 +17,28 @@ import { getCart } from "../utils/localStorage"
 //import Auth from "../utils/auth";
 
 const CartCheckoutForm = () => {
-  const { loading, data } = getCart();
+  const cart = getCart();
+  
   const [showAlert, setShowAlert] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const cart = data?.cart || [];
+  //const cart = data?.cart || [];
+
+  console.log(cart)
 
   const handleCheckout = async () => {
     try {
+      console.log("hello")
+      // have a state variable on this component that checks whether they've checked the checkout button
+      // run checkout mutaion, set state variable to true meaning it's been submitted
+      // render inside return a conditional statement that says display this if true
+      
+      return (
+
       <Box>
         <h1>Hello</h1>
-      </Box>
 
+      </Box>
+      )
       // const { data } = await checkout({
       //   variables: {
       //     pizzas: cart.map((item) => ({
@@ -35,7 +47,7 @@ const CartCheckoutForm = () => {
       //       price: item.price,
       //     })),
       //   },
-      //});
+      // });
       // Handle successful checkout (e.g., redirect to a success page)
       //console.log(data.checkout.session);
     } catch (err) {
@@ -47,9 +59,9 @@ const CartCheckoutForm = () => {
     }
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <Container maxWidth="sm">
@@ -64,11 +76,11 @@ const CartCheckoutForm = () => {
         )}
         <List>
           {cart.map((item, index) => (
-            <div key={item.pizza._id}>
+            <div key={item._id}>
               <ListItem>
                 <ListItemText
-                  primary={`${item.pizza.name}`}
-                  secondary={`Quantity: ${item.quantity} - Price: $${item.pizza.price}`}
+                  primary={`${item.name}`}
+                  secondary={`Quantity: ${item.quantity} - Price: $${item.price}`}
                 />
               </ListItem>
               {index < cart.length - 1 && <Divider />}
