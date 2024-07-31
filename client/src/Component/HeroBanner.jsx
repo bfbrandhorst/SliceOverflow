@@ -1,6 +1,12 @@
-export function HeroBanner() {
+export function HeroBanner({children}) {
     return (
-        <div className="h-96 bg-[url('assets/HomePic2.jpg')] bg-center bg-cover">
-        </div>
+        <>
+        
+        <img
+        src="assets/HomePic2.jpg"
+        className="absolute h-screen w-screen bot-0 object-cover object-bottom pointer-events-none z-[-1]"
+      />
+        <div className="flex flex-col items-start justify-start">{children}</div>
+        </>
     )
 }
