@@ -1,10 +1,49 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ApolloProvider } from "@apollo/client";
+import client from "./apolloClient.js";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import App from './App.jsx'
+import Home from './pages/Home.jsx'
+import Menu from './pages/Menu.jsx'
+import LoginSignup from './pages/LoginSignup.jsx' 
+import CartCheckout from './pages/CartCheckout.jsx'
+import CheckoutResult from "./pages/Cart/CheckoutResult.jsx";
+import "./index.css" 
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <h1 className="display-2">Wrong page!</h1>,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: '/menu',
+        element: <Menu />
+      },
+      {  path: '/loginSignup',
+        element: <LoginSignup />
+      }, 
+      {
+        path: '/cartCheckout',
+        element: <CartCheckout />
+      },
+      {
+        path: '/checkoutResult',
+        element: <CheckoutResult/>
+      }
+    ]
+  }
+])
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <ApolloProvider client={client}>
+    <RouterProvider router={router} />
+  </ApolloProvider>
+);
