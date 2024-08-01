@@ -39,7 +39,7 @@ const Menu = () => {
 )
 
   return (
-    <div>
+    <div className='m-4'>
 
       <section className='pizzaContainer'>
       {pizzas.map((pizza, index) =>  (
