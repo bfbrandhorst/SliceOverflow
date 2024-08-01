@@ -22,23 +22,23 @@ export default function Example() {
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+          <div className="flex items-center flex-row w-full">
+          
               
               <img
                 alt="Slice Overflow"
                 src={sliceIcon}
                 className="h-8 w-auto rounded items-start"
               />
-            </div>
+      
             <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium logo" to="/" >Slice Overflow</Link>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:block ml-auto">
               <div className="flex space-x-4">
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/">Home</Link>
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/menu">Menu</Link>
-              {Auth.loggedIn() ? <Button onClick={Auth.logout} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Logout</Button>: <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/loginSignup">Login or Signup</Link>}
+              <Link className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/">Home</Link>
+              <Link className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/menu">Menu</Link>
+              {Auth.loggedIn() ? <Button onClick={Auth.logout} className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Logout</Button>: <Link className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/loginSignup">Login or Signup</Link>}
               
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/cartCheckout"><img
+              <Link className="flex justify-center items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/cartCheckout"><img
                 alt="Slice Overflow"
                 src={checkout}
                 className="h-8 w-auto rounded items-start"

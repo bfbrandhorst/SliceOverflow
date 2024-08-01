@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {HeroBanner} from '../Component/HeroBanner'
 
 const Home =()=>{
@@ -44,14 +45,16 @@ const Home =()=>{
                     <p>500 Artisan Lane</p>
                     <p>SUN - THURS: 11:00 AM- 9:00 PM </p>
                     <p>FRI & SAT: 11:00 AM - 11:00 PM</p>
-                   <button className='rounded-full bg-black text-white p-4 mt-4'>Order Online</button>
+                    <br></br>
+                    <Link className='rounded-full bg-black text-white p-4 mt-4' to='/menu'>Order Online</Link>
                 </div>
                 <div className='bg-white rounded-xl p-9 px-9 m-6 border-4 border-black border-double'>
                     <h2>Dallas, TX</h2>
                     <p>800 Ryan Street</p>
                     <p>SUN - THURS: 11:00 AM- 9:00 PM </p>
                     <p>FRI & SAT: 11:00 AM - 11:00 PM</p>
-                    <button className='rounded-full bg-black text-white p-4 mt-4'>Order Online</button>
+                    <br></br>
+                    <Link className='rounded-full bg-black text-white p-4 mt-4' to='/menu'>Order Online</Link>
                 </div>
             </section>
     </HeroBanner>
