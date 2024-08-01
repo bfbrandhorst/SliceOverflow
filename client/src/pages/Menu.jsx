@@ -49,16 +49,18 @@ const Menu = () => {
                <img src={pizza.image} alt={pizza.name}/>
              </div>
              <div className='pizzaInfo'>
-             <p>{pizza.price}</p>
-             <h3>{pizza.name}</h3>
+             <h3 className='logo text-2xl'>{pizza.name}</h3>
+             <br></br>
              <p>{pizza.description}</p>
+             <p>${pizza.price}</p>
+             <br></br>
                 <div>Quantity:
                   <button onClick={() => handleDecrease(index)}>⬇</button>
                   <span>{pizza.quantity}</span>
                   <button onClick={() => handleIncrease(index)}>⬆</button>
                 </div>
                 <br />
-                <button onClick = { () => setCart(pizzas) } >Add to Cart</button>
+                <button className= 'rounded-full bg-black text-white p-2 mt-4' onClick = { () => setCart(pizzas) } >Add to Cart</button>
              </div>
           </div>
             

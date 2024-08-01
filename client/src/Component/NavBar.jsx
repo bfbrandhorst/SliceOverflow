@@ -27,10 +27,10 @@ export default function Example() {
               <img
                 alt="Slice Overflow"
                 src={sliceIcon}
-                className="h-8 w-auto"
+                className="h-8 w-auto rounded"
               />
             </div>
-            <p className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium logo" >Slice Overflow</p>
+            <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium logo" to="/" >Slice Overflow</Link>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
               <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/">Home</Link>
