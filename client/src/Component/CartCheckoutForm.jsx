@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { handleCheckout } from "../pages/Cart/handleCheckout";
+import { useNavigate } from "react-router-dom";
 import {
   Container,
   Typography,
@@ -12,56 +13,26 @@ import {
   ListItemText,
   Divider,
 } from "@mui/material";
-//import { useMutation, useQuery } from "@apollo/client";
+
 import { getCart } from "../utils/localStorage"
-//import Auth from "../utils/auth";
 
 const CartCheckoutForm = () => {
   const cart = getCart();
   
   const [showAlert, setShowAlert] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  //const cart = data?.cart || [];
 
-  console.log(cart)
+  const filteredCart = cart.filter(item => item.quantity > 0);
 
-  const handleCheckout = async () => {
-    try {
-      console.log("hello")
-      // have a state variable on this component that checks whether they've checked the checkout button
-      // run checkout mutaion, set state variable to true meaning it's been submitted
-      // render inside return a conditional statement that says display this if true
-      
-      return (
+  const navigate = useNavigate();
 
-      <Box>
-        <h1>Hello</h1>
+  const handleCheckout = () => {navigate("/checkoutResult")}
 
-      </Box>
-      )
-      // const { data } = await checkout({
-      //   variables: {
-      //     pizzas: cart.map((item) => ({
-      //       pizza: item.pizza._id,
-      //       quantity: item.quantity,
-      //       price: item.price,
-      //     })),
-      //   },
-      // });
-      // Handle successful checkout (e.g., redirect to a success page)
-      //console.log(data.checkout.session);
-    } catch (err) {
-      console.error(err);
-      setErrorMessage(
-        err.message || "Something went wrong with your checkout!"
-      );
-      setShowAlert(true);
-    }
-  };
+  const totalPrice = filteredCart.reduce((total, item) => {
+    return total + item.price * item.quantity;
+  }, 0);
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
+  const totalWithTax = totalPrice * 1.0825
 
   return (
     <Container maxWidth="sm">
@@ -75,7 +46,7 @@ const CartCheckoutForm = () => {
           </Alert>
         )}
         <List>
-          {cart.map((item, index) => (
+          {filteredCart.map((item, index) => (
             <div key={item._id}>
               <ListItem>
                 <ListItemText
@@ -87,6 +58,11 @@ const CartCheckoutForm = () => {
             </div>
           ))}
         </List>
+
+        <Typography variant="h6" component="p" align="right">
+          Total: ${totalPrice.toFixed(2)}<br></br>
+          Total with Tax: ${totalWithTax.toFixed(2)}
+        </Typography>
 
         <Box mt={2}>
           <Button

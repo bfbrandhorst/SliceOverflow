@@ -1,119 +1,90 @@
-# SliceOverflow
+**SliceOverflow**
 
-## Description
+**Table of Contents**
 
-This project is a MERN full stack Application.
-
-**[Deployed Application]**
-
-💻 Below is a screenshot of the application:
-
-![Pizza-Delight](./public/images/homepage.png)
-
-## Table of Contents
 - [Description](#description)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
-- [Available Scripts](#available-scripts)
-  - [`npm start`](#npm-start)
-  - [`npm test`](#npm-test)
-  - [`npm run build`](#npm-run-build)
-  - [`npm run eject`](#npm-run-eject)
-- [Learn More](#learn-more)
-  - [`Code Splitting`](#code-splitting)
-  - [`Analyzing the Bundle Size`](#analyzing-the-bundle-size)
-  - [`Making a Progressive Web App`](#making a-progressive-web-app)
-  - [`Advanced Configuration`](#advanced-configuration)
-  - [`Deployment`](#Deployment)
-- [Contributing](#contributing)
+- [Technology Used](#technology-used)
+- [Installation](#installation)
+- [Contributors](#contributors)
 
-## User Story
+---
 
-```md
-AS A developer
-I WANT to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
-```
+### Description
 
-## Acceptance Criteria
+A pizza ordering app allows users to browse a menu of various pizzas, add those pizzas to the cart, and place an order. The app includes features like creating a new user, logging in using the authentication process, adding pizza(s) to the cart, and checking out.
 
-```md
-GIVEN an e-commerce platform that uses Redux to manage global state
-WHEN I review the app’s store
-THEN I find that the app uses a Redux store instead of the Context API
-WHEN I review the way the React front end accesses the store
-THEN I find that the app uses a Redux provider
-WHEN I review the way the app determines changes to its global state
-THEN I find that the app passes reducers to a Redux store instead of using the Context API
-WHEN I review the way the app extracts state data from the store
-THEN I find that the app uses Redux instead of the Context API
-WHEN I review the way the app dispatches actions
-THEN I find that the app uses Redux instead of the Context API
-``` 
+---
 
-## Available Scripts
+### User Story
 
-In the project directory, you can run:
+AS A developer, I WANT to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Acceptance Criteria
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Use React for the front end.
+- Use GraphQL with a Node.js and Express.js server.
+- Use MongoDB and the Mongoose ODM for the database.
+- Use queries and mutations for retrieving, adding, updating, and deleting data.
+- Be deployed using Render (with data).
+- Have a polished UI.
+- Be responsive.
+- Be interactive (i.e., accept and respond to user input).
+- Include authentication (JWT).
+- Protect sensitive API key information on the server.
+- Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, and so on).
+- Use Tailwind (anything besides bootstrap) for styling.
+- Have a high-quality README.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Technology Used
 
-### `npm run build`
+- MongoDB
+- Mongoose
+- GraphQL
+- Express.js
+- Node.js
+- Bcrypt
+- JWT
+- React
+- CSS
+- JavaScript
+- Apollo
+- Vite
+- eslint
+- Nodemon
+- Jsonwebtoken
+- dotenv
+- Tailwind
+- Material UI
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To install the dependencies for this project, the user simply needs to clone the repository and then run the command "npm install". This will install all necessary dependencies since they are all included in the package.json.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Contributors
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [bfbrandhorst](https://github.com/bfbrandhorst)
+- [ghern5234](https://github.com/ghern5234)
+- [sd8295642](https://github.com/sd8295642)
+- [arunmishra11](https://github.com/arunmishra11)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Screenshots**
 
-## Learn More
+<img width="848" alt="image" src="https://github.com/user-attachments/assets/b5bafd83-6df0-43d8-a03d-fbd238e025b6">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="917" alt="image" src="https://github.com/user-attachments/assets/af9f6df9-3c9a-4700-a1ff-d2a9eb99b447">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="730" alt="image" src="https://github.com/user-attachments/assets/fdb5cba0-e814-411f-96c1-9609e5a4f747">
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-
-
-## Contributing
-:octocat: [Sorna Kesavan](https://github.com/alsornak)
+Code Deployed: [SliceOverflow](https://sliceoverflow-1.onrender.com/)
