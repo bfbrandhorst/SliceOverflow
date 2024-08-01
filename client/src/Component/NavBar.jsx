@@ -2,6 +2,7 @@ import { Button, Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton
 import { Link } from 'react-router-dom'
 import Auth from "../utils/auth"
 import sliceIcon from '../../public/assets/sliceIcon.png'
+import checkout from '../../public/assets/checkout.png'
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   { name: 'Team', href: '#', current: false },
@@ -27,7 +28,7 @@ export default function Example() {
               <img
                 alt="Slice Overflow"
                 src={sliceIcon}
-                className="h-8 w-auto rounded"
+                className="h-8 w-auto rounded items-start"
               />
             </div>
             <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-lg font-medium logo" to="/" >Slice Overflow</Link>
@@ -37,7 +38,11 @@ export default function Example() {
               <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/menu">Menu</Link>
               {Auth.loggedIn() ? <Button onClick={Auth.logout} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Logout</Button>: <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/loginSignup">Login or Signup</Link>}
               
-              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/cartCheckout">Checkout</Link>
+              <Link className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" to="/cartCheckout"><img
+                alt="Slice Overflow"
+                src={checkout}
+                className="h-8 w-auto rounded items-start"
+              /></Link>
               </div>
             </div>
           </div>
