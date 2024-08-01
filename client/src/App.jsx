@@ -14,7 +14,7 @@ function App() {
   const [cart, updateCart] = useState([])
 
   return (
-    // This is what allows us to use apollo hooks
+    
     <ApolloProvider client={client}> 
       <NavBar/>
       <Outlet/>
