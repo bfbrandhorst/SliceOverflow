@@ -1,37 +1,37 @@
 [
 {   
-    "name": "this.pizza",
-    "description": "Anchovy",
+    "name": "this.Pizza",
+    "description": "Anchovy, Mozzarella, Onion, Artichoke, Spinach, Red Peppers ",
     "image": "assets/This.jpg",
     "price": 9.99
 },
 {
-    "name": "CRUD",
-    "description": "Meat Lovers",
+    "name": "Stuffed CRUD",
+    "description": "Pepperoni, Sausage, Olives, Mozzarella Stuffed Crust",
     "image": "assets/CRUD.jpg",
     "price": 9.99
 },
 {
-    "name": "C++",
-    "description": "Cheese Lovers",
+    "name": "C++ Cheese Lovers",
+    "description": "Parmesan, Mozzarella, Romano, Provolone, Ricotta, GoatCheese, Basil",
     "image": "assets/Cheese.jpg",
     "price": 9.99
 },
 {
     "name": "Github Garden",
-    "description": "Veggie Lovers",
+    "description": "Olives, Zucchini, Red Bellpepper, Green Bellpepper, Yellow Bellpepper, Corn, Onion",
     "image": "assets/GithubGarden.jpg",
     "price": 9.99
 },
 {
     "name": "Boolean Byte",
-    "description": "1/2 Salami, 1/2 Veggie",
+    "description": "1/2 Salami, Prosciutto Arugula, Pepperoni & 1/2 Red Bellpepper, Banana Pepper, Arugula, Onion",
     "image": "assets/BooleanByte.jpg",
     "price": 9.99
 },
 {
-    "name": "Hacker's Paradise",
-    "description": "Hawaiian",
+    "name": "Hawaiian Hacker's Paradise",
+    "description": "Pineapple, Red Onion, Grilled Chicken, BBQ Drizzle, Parsley",
     "image": "assets/HackersParadise.jpg",
     "price": 9.99
 }
